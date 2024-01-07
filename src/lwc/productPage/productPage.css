@@ -1,0 +1,206 @@
+
+.popMenu{
+    display:none;
+}
+
+.headerInfo{
+    display: flex;
+    justify-content: space-between;
+background: #f0f0e3;
+    height: 5vh;
+    padding: 0.4rem 1rem;
+}
+
+.contactInfo{
+    display: flex;
+    margin: 0 1rem;
+    align-items: center;
+}
+.searchBar{
+    display:flex;
+    height:8vh;
+    justify-content: space-between;
+    margin: 2rem;
+}
+.basketIcons{
+    display:flex;
+}
+.logo{
+        width: 4rem;
+        height: auto;
+}
+.hcc{
+    width:1.5rem;
+        height:1.5rem;
+}
+.cc{
+    width:5rem;
+    height:5rem;
+}
+.searchbox{
+    display:flex;
+}
+.search{
+    width: 7rem;
+    background: red;
+    color: white;
+}
+.search p{
+        padding: 11px;
+        text-align: center;
+}
+input{
+        width: 20vw;
+}
+.catagory{
+    display: flex;
+    justify-content: space-between;
+    padding:1%;
+    height:9vh
+}
+.catagory ul{
+    display:flex;
+    gap: 1rem;
+}
+.catagoryButton{
+    background: red;
+        color: white;
+        width: 15vw;
+        border-radius: 10px;
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+}
+.title img{
+    width:100vw;
+    height:50vh;
+    object-fit:cover;
+}
+.itemArea{
+    display:flex;
+        margin: 4rem;
+}
+.filters{
+    width:25vw;
+}
+.filters h2{
+    font-size:1.5rem;
+    font-weight:600;
+}
+.filters li{
+    height:5vh;
+
+}
+.pr{
+    width:65vw;
+}
+.pr img{
+    height: 100%;
+        width: 25%;
+        object-fit:cover;
+}
+.productCard{
+    display:flex;
+    height: 40vh;
+        margin: 2rem;
+}
+.productCard .button{
+        width: 10vw;
+        height: 6vh;
+        background: red;
+        color: white;
+        border-radius: 1rem;
+        text-align: center;
+        padding-top: 2%;
+}
+.productCard a{
+    color:white;
+}
+.cardDetail{
+    margin: 0 3rem;
+}
+.pname{
+    font-size:1.5rem;
+    font-weight:600;
+}
+.pp{
+    margin-bottom:1rem;
+}
+.cartPop{
+   height: 100%;
+   overflow-y: scroll;
+
+
+}
+.cartPopCard{
+    display: flex;
+    background: white;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+.cartPopCard img{
+    width:3rem;
+    height:5rem;
+    object-fit:cover;
+}
+
+.cartPopSection{
+        display:none;
+        right: 1rem;
+            width: 23vw;
+            z-index: 1;
+            bottom: 0;
+            background: #281b41;
+            border-top-left-radius: 2rem;
+            border-top-right-radius: 2rem;
+            position: fixed;
+            padding: 1rem;
+}
+.deleteIcon{
+    background-color: #adc6c6;
+        height: 2rem;
+        right: 2rem;
+        position: absolute;
+}
+.closeIcon{
+        background-color: white;
+        height: 2rem;
+        left: -1rem;
+        position: absolute;
+        top: -2rem;
+}
+.numberCart{
+        width: 1rem;
+        position: absolute;
+        top: 5rem;
+        color: #939328;
+        font-size: 1.2rem;
+        right: 4.8rem;
+}
+.cpname{
+    margin: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+
+.cpprice{
+    width: 6vw;
+    font-size: 0.8rem;
+    background-color: #ffad33;
+    text-align: center;
+    border-radius: 1rem;
+
+}
+.popTotal{
+    background: white;
+        padding: 0.4rem;
+        border-radius: 1rem;
+        font-weight: 700;
+        display:flex;
+        justify-content: space-between;
+}
+.pc{
+    display: flex;
+    justify-content: space-between;
+    width: 13vw;
+    padding-left: 1rem;
+}

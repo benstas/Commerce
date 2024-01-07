@@ -1,0 +1,25 @@
+<template>
+    <div class="app">
+        <div class="slds-is-relative container" >
+            <template for:each={slidesData} for:item="slide">
+                <div class={slide.cardClasses} key={slide.slideIndex}>
+                    <div class="slideNumbers">{slide.slideIndex}/{slidesData.length} </div>
+                    <img src={slide.image}/>
+                    <div class="text-section slds-p-around_medium">
+
+                        <p>{slide.description}</p>
+                        <h3 >{slide.heading}</h3>
+
+                    </div>
+                </div>
+            </template>
+            <div class="buttons">
+                <a class="prev" onclick={backSlide}>&#10094;</a>
+                <a class="next" onclick={forwardSlide}>&#10095;</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</template>

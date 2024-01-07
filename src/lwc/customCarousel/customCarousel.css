@@ -1,0 +1,139 @@
+.container{
+    margin: auto;
+    position: relative;
+
+    
+}
+.app{
+    z-index: 0;
+}
+.container img{
+    height: 80vh;
+    object-fit: cover;
+}
+h3{
+    font-size: 1rem;
+    width: 50vw;
+    animation: fadeIn 3s;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+.text-section{
+    position: absolute;
+    color: #f2f2f2;
+    font-size: 15px;
+    width: 100%;
+    top:20rem;
+    text-align: left;
+    padding: 3rem;
+}
+.next{
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    font-size: 3rem;
+}
+.prev{
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    font-size: 3rem;
+}
+.next{
+    right:0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover{
+    background: rgba(0,0,0, 0.8);
+}
+
+.slideNumbers{
+    font-size: 12px;
+    position: absolute;
+    padding: 8px 12px;
+    top: 0;
+    color: #ffffff;
+}
+
+
+.dot{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgb(120, 21, 21);
+    margin:0 2px;
+    display: inline-block;
+    position: relative;
+    
+}
+.active, .dot:hover{
+    background-color: #717171;
+}
+
+.fade{
+    animation-name:fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade{
+    from {opacity: .9}
+    to {opacity: 1}
+}
+
+img{
+    width: 100vw;
+}
+.activebutton::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+
+  }
+  
+  .activebutton:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+
+  }
+  
+  .activebutton::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: hsl(200 100% 80%);
+    z-index: -1;
+    transition: transform .5s ease;
+    border-radius: 2rem;
+  }
+  
+  .activebutton {
+    position: relative;
+    font-size: 2rem;
+    width: 20vw;
+    z-index: 1;
+    margin-left: 1rem;
+    text-align: center;
+    background-color: rgb(10, 179, 122);
+    border-radius: 2rem;
+
+  }
+.buttons{
+    display:flex;
+
+}

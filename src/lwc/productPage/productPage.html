@@ -1,0 +1,134 @@
+<template>
+    <section class="site">
+    <header>
+        <div class="headerInfo">
+            <div>Welcome To Store</div>
+            <div class="contactInfo">
+                <div class="contactInfo">
+                    <div><img src={phone} class="hcc"></div>
+                    <div>+83838383838</div>
+
+                </div>
+                <div class="contactInfo">
+                    <div><img src={user} class="hcc"></div>
+                    <div>info@gmail.com</div>
+                </div>
+            </div>
+        </div>
+
+
+        <nav>
+            <div class="searchBar">
+
+                <div><img src={logo} class="logo"></div>
+                <div class="searchbox">
+                    <input type="text">
+                    <div class="search"><p>Search</p></div>
+                </div>
+                <div class="basketIcons">
+                    <a class="cc" href="https://commerce-selim-tas-dev-ed.develop.my.site.com/commerce/account"><lightning-icon icon-name='utility:user' alternative-text='user' size='small' title='user'></lightning-icon></a>
+                    <a class="cc" href="https://commerce-selim-tas-dev-ed.develop.my.site.com/commerce/favorites"><lightning-icon icon-name='utility:favorite' alternative-text='favorite' size='small' title='favorite'></lightning-icon></a>
+                    <a class="cc" href="https://commerce-selim-tas-dev-ed.develop.my.site.com/commerce/cart"><div class="numberCart">{numberofItemOnCart}</div><lightning-icon icon-name='utility:cart' alternative-text='cart' size='small' title='cart'></lightning-icon></a>
+
+                </div>
+
+            </div>
+            <div class="catagory">
+                <div class="catagoryButton" onclick={catagoryHandler}>
+                    <lightning-icon icon-name='utility:fulfillment_order' alternative-text='fulfillment_order' size='small' title='fulfillment_order'></lightning-icon>
+                    <p>All Catagory</p>
+                </div>
+                <ul>
+                    <li><a href="https://commerce-selim-tas-dev-ed.develop.my.site.com/commerce">Home</a></li>
+                    <li>About Us</li>
+                    <li>Pages</li>
+                    <li>Shop</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="popMenu">
+                <button>X</button>
+                <ul>
+                    <li>Shirt</li>
+                    <li>Tshirt</li>
+                    <li>Woman</li>
+                    <li>Men</li>
+                    <li>Summer</li>
+                    <li>Winter</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="title">
+        <img src={i9} alt="">
+    </section>
+    <section class="itemArea">
+        <div class="filters">
+            <h2>Catagories</h2>
+            <ul>
+                <li>Woman <span>(10)</span></li>
+                <li>Men <span>(10)</span></li>
+                <li>Child <span>(10)</span></li>
+                <li>Footwear <span>(10)</span></li>
+                <li>Bags And Backpacks <span>(10)</span></li>
+            </ul>
+            <h2>Filter Price</h2>
+            <div>--------pricebar------------</div>
+            <h2>Color</h2>
+
+            <ul>
+                <li>Black <span>(10)</span></li>
+                <li>Blue <span>(10)</span></li>
+                <li>Red <span>(10)</span></li>
+                <li>White <span>(10)</span></li>
+                <li>Grey <span>(10)</span></li>
+            </ul>
+
+
+        </div>
+        <div class="pr">
+            <div>OrderPiclist</div>
+            <div class="productCards">
+                <template for:each={siteProducts} for:item="product" for:index="index" >
+                    <div key={product.id} class="productCard">
+                        <img src={i3} alt={product.name}>
+                        <div class="cardDetail">
+                            <div class="pname pp">{product.name}</div>
+                            <div class="pprice pp">{product.price}TL</div>
+                            <div class="detail pp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, eligendi. Lorem ipsum dolor sit amet.</div>
+                            <div class="button" data-productid={product.id} data-productname={product.name} data-productprice={product.price} onclick={addToCart}>Add to Cart</div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </section>
+    <section class="cartPopSection">
+        <lightning-icon class="closeIcon" onclick={popcartClose}  icon-name='utility:close' alternative-text='close' size='medium' title='close'></lightning-icon>
+        <div class="cartPop">
+            <template for:each={cartList} for:item="cl">
+                <div key={cl.id} class="cartPopCard">
+                    <img src={i3} >
+                    <div class="cpCardDetail">
+                        <div class="cpname ">{cl.name}</div>
+                       <div class="pc">
+                           <div>X{cl.count}</div>
+                           <div class="cpprice ">{cl.price}TL</div>
+
+                       </div>
+                    </div>
+                    <lightning-icon onclick={handleRemoveButtonClick} data-productid={cl.id} class="deleteIcon" icon-name='standard:cancel_checkout' alternative-text='cancel_checkout' size='medium' title='cancel_checkout'></lightning-icon>
+
+                </div>
+
+            </template>
+        </div>
+        <div class="popTotal">
+            <div>Total Price</div>
+            <div >{popTotal} Tl</div>
+        </div>
+
+    </section>
+    </section>
+
+</template>
