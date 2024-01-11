@@ -1,0 +1,37 @@
+.closeIcon{
+        background-color: white;
+        height: 2rem;
+        left: -1rem;
+        position: absolute;
+        top: -2rem;
+}
+.cartPopCard{
+    display: flex;
+    background: white;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+.cartPopCard img{
+    width:3rem;
+    height:5rem;
+    object-fit:cover;
+}
+.cpname{
+    margin: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+
+.cpprice{
+    width: 6vw;
+    font-size: 0.8rem;
+    background-color: #ffad33;
+    text-align: center;
+    border-radius: 1rem;
+
+}
+.pc{
+    display: flex;
+    justify-content: space-between;
+    width: 13vw;
+    padding-left: 1rem;
+}

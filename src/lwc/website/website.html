@@ -1,314 +1,185 @@
 <template>
     <section class="site">
-    <header>
-     <nav>
-            <div class="searchBar">
-
-                    <div><img src={logo} class="logo"></div>
-                    <div class="searchbox">
-                        <input type="text">
-                        <button type="button" class="search">Search</button>
-                    </div>
-                    <div class="basketIcons">
-                        <div><a class="cc" href="https://commerce-selim-tas-dev-ed.develop.my.site.com/commerce/account">Login</a></div>
-                        <div><a class="cc" href="https://commerce-selim-tas-dev-ed.develop.my.site.com/commerce/favorites">My Account</a></div>
-                        <div><a class="cc" href="https://commerce-selim-tas-dev-ed.develop.my.site.com/commerce/favorites">Wishlist</a></div>
-                        <div><a class="cc" href="https://commerce-selim-tas-dev-ed.develop.my.site.com/commerce/cart"><div class="numberCart">{numberofItemOnCart}</div>Cart</a></div>
-
-                    </div>
-
-            </div>
-            <div class="catagory">
-                <div class="menu">
-                    <ul>
-                        <li><a href="https://commerce-selim-tas-dev-ed.develop.my.site.com/commerce">Home</a></li>
-                        <li>About Us</li>
-                        <li>Pages</li>
-                        <li>Shop</li>
-                        <li>Contact</li>
-                    </ul>
-                </div>
-                <div class="catagoryButton" onmouseover= {displayCatagory} >
-                    <lightning-icon icon-name='utility:fulfillment_order' alternative-text='fulfillment_order' size='small' title='fulfillment_order'></lightning-icon>
-                    <p>All Catagory</p>
-                </div>
-            </div>
-            <div class="popMenu" onmouseleave={hideCatagory}>
-                <ul>
-                    <li>Shirt</li>
-                    <li>Tshirt</li>
-                    <li>Woman</li>
-                    <li>Men</li>
-                    <li>Summer</li>
-                    <li>Winter</li>
-                </ul>
-            </div>
-
-        </nav>
-    </header>
-    <section class="banner">
-
-        <c-custom-carousel slides-data={slides}  ></c-custom-carousel>
-
-    </section>
-        <section class="summerIcon">
-            <div class="kCard">
-                <img src={delivery} alt="">
-                <div class="kk">
-                    <h2>FREE DELIVERY</h2>
-                    <h3>WORLDWIDE</h3>
-                </div>
-            </div>
-            <div class="kCard">
-                <img src={support} alt="">
-                <div class="kk">
-                    <h2>24/ 7 SUPPORT</h2>
-                    <h3>CUSTOMER SUPPORT</h3>
-                </div>
-            </div>
-            <div class="kCard">
-                <img src={payment} alt="">
-                <div class="kk">
-                    <h2>PAYMENT</h2>
-                    <h3>SECURE SYSTEM</h3>
-                </div>
-            </div>
-            <div class="kCard">
-                <img src={trust} alt="">
-                <div class="kk">
-                    <h2>TRUSTED</h2>
-                    <h3>ENUNE PRODUCTS</h3>
-                </div>
-            </div>
-
+        <header>
+            <c-header  ></c-header>
+        </header>
+        <section class="banner">
+            <c-custom-carousel slides-data={slides}  ></c-custom-carousel>
         </section>
-    <section class="men-woman-card">
-        <div class="sCard"><div class="sCardText">Men Fashion</div><img src={i6} alt=""></div>
-        <div class="sCard"><div class="sCardText">Woman Fashion</div><img src={i9} alt=""> </div>
-    </section>
-    <section class="popularItemsCards">
-    <div class="pp">
-        <h2>Popular Products</h2>
-        <div class="rowButtons">
-            <lightning-icon icon-name='utility:back' alternative-text='back' size='medium' title='back' onclick={handleBackClick}></lightning-icon>
-            <lightning-icon icon-name='utility:forward' alternative-text='forward' size='medium' title='forward' onclick={handleForwardClick}></lightning-icon>
-        </div>
-    </div>
-
-
-        <div>
-            <div class="popCards gallery" >
-                <template for:each={products} for:item="product" for:index="index" class="row1">
-                    <div key={product.name} class="productCard">
-                        <img src={product.image} alt={product.name}>
-                        <div class="pname">{product.name}</div>
-                        <div class="pprice">{product.price}TL</div>
+        <section class="summerIcon">
+                <div class="kCard">
+                    <img src={delivery} alt="">
+                    <div class="kk">
+                        <h2>FREE DELIVERY</h2>
+                        <h3>WORLDWIDE</h3>
                     </div>
-                </template>
+                </div>
+                <div class="kCard">
+                    <img src={support} alt="">
+                    <div class="kk">
+                        <h2>24/ 7 SUPPORT</h2>
+                        <h3>CUSTOMER SUPPORT</h3>
+                    </div>
+                </div>
+                <div class="kCard">
+                    <img src={payment} alt="">
+                    <div class="kk">
+                        <h2>PAYMENT</h2>
+                        <h3>SECURE SYSTEM</h3>
+                    </div>
+                </div>
+                <div class="kCard">
+                    <img src={trust} alt="">
+                    <div class="kk">
+                        <h2>TRUSTED</h2>
+                        <h3>ENUNE PRODUCTS</h3>
+                    </div>
+                </div>
+
+            </section>
+        <section class="men-woman-card">
+            <div class="sCard"><div class="sCardText">Men Fashion</div><img src={i6} alt=""></div>
+            <div class="sCard"><div class="sCardText">Woman Fashion</div><img src={i9} alt=""> </div>
+        </section>
+        <section class="popularItemsCards">
+            <div class="pp">
+                <h2>Popular Products</h2>
+                <div class="rowButtons">
+                    <lightning-icon icon-name='utility:back' alternative-text='back' size='medium' title='back' onclick={handleBackClick}></lightning-icon>
+                    <lightning-icon icon-name='utility:forward' alternative-text='forward' size='medium' title='forward' onclick={handleForwardClick}></lightning-icon>
+                </div>
             </div>
-        </div>
-
-
-
-
-
-
-    </section>
-
-    <section class="commentArea">
-        <div class="commentCard">
-            <div><h1>Mehmet Lale</h1></div>
-            <div><h2>2 yıldır üye</h2></div>
-            <div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab culpa deserunt earum ex modi necessitatibus quae quas recusandae similique tempore?</p></div>
-            <img src={i9} alt="">
-        </div>
-        <div class="commentCard">
-            <div><h1>Mehmet Lale</h1></div>
-            <div><h2>2 yıldır üye</h2></div>
-            <div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab culpa deserunt earum ex modi necessitatibus quae quas recusandae similique tempore?</p></div>
-            <img src={i9} alt="">
-        </div>
-
-
-    </section>
-    <section class="discount">
-        <div class="pp">
-            <h2>products on sale</h2>
-            <div class="rowButtons">
-                <lightning-icon icon-name='utility:back' alternative-text='back' size='medium' title='back' onclick={handleBackClick2}></lightning-icon>
-                <lightning-icon icon-name='utility:forward' alternative-text='forward' size='medium' title='forward' onclick={handleForwardClick2}></lightning-icon>
-            </div>
-        </div>
-        <div class="disContainer">
-            <div class="disCatagory">
-                <ul>
-                    <li class="man" onclick={handleMouseEnter}>Man</li>
-                    <li class="woman" onclick={handleMouseEnter}>Woman</li>
-                    <li class="special" onclick= {handleMouseEnter}>Special</li>
-                    <li class="kid" onclick= {handleMouseEnter}>Kid</li>
-                </ul>
-                <div class="popCards1 gallery2" >
-                    <template for:each={products} for:item="product" for:index="index" >
-                        <div key={product.name} class="productCard1">
-                            <img src={product.image} alt={product.name}>
+            <div>
+                <div class="popCards gallery" >
+                    <template for:each={popularProducts} for:item="product" for:index="index" class="row1">
+                        <div key={product.name} class="productCard">
+                            <img src={i3} >
                             <div class="pname">{product.name}</div>
                             <div class="pprice">{product.price}TL</div>
+                            <div class="button" data-productid={product.id} data-productname={product.name} data-productprice={product.price} onclick={addToCart}>Add to Cart</div>
                         </div>
                     </template>
                 </div>
-
             </div>
-
-        </div>
-    </section>
-
-    <section class="news">
-        <div class="pp">
-            <h2>Latest News</h2>
-        </div>
-        <div class="newscards">
-                <div class="newsCard">
-                    <img src={i1} alt="">
-                    <h3>Lorem ipsum dolor.</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-
-                    <div class="comment">
-                        <img src={login} alt="">
-                        <p>comment</p>
-                    </div>
-                    <a href="">Read More</a>
-
-
-                </div>
-
-                <div class="newsCard">
-                    <img src={i1} alt="">
-                    <h3>Lorem ipsum dolor.</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-
-                    <div class="comment">
-                        <img src={login} alt="">
-                        <p>comment</p>
-                    </div>
-                    <a href="">Read More</a>
-
-                </div>
-                <div class="newsCard">
-                    <img src={i1} alt="">
-                    <h3>Lorem ipsum dolor.</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-
-                    <div class="comment">
-                        <img src={login} alt="">
-                        <p>comment</p>
-                    </div>
-                    <a href="">Read More</a>
-
+        </section>
+        <section class="commentArea">
+            <div class="commentCard">
+                <div><h1>Mehmet Lale</h1></div>
+                <div><h2>2 yıldır üye</h2></div>
+                <div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab culpa deserunt earum ex modi necessitatibus quae quas recusandae similique tempore?</p></div>
+                <img src={i9} alt="">
+            </div>
+            <div class="commentCard">
+                <div><h1>Mehmet Lale</h1></div>
+                <div><h2>2 yıldır üye</h2></div>
+                <div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab culpa deserunt earum ex modi necessitatibus quae quas recusandae similique tempore?</p></div>
+                <img src={i9} alt="">
+            </div>
+        </section>
+        <section class="discount">
+            <div class="pp">
+                <h2>products on sale</h2>
+                <div class="rowButtons">
+                    <lightning-icon icon-name='utility:back' alternative-text='back' size='medium' title='back' onclick={handleBackClick2}></lightning-icon>
+                    <lightning-icon icon-name='utility:forward' alternative-text='forward' size='medium' title='forward' onclick={handleForwardClick2}></lightning-icon>
                 </div>
             </div>
-
-
-    </section>
-    <section class="instagramSection">
-        <div class=" gallery3 insRow1" >
-            <template for:each={imgs} for:item="img" for:index="index" >
-                <div key={img.i} class="imgCard">
-                    <img src={img.i} >
-
-                </div>
-            </template>
-        </div>
-        <div class=" gallery3 insRow2" >
-            <template for:each={revimgs} for:item="img" for:index="index">
-                <div key={img.i} class="imgCard">
-                    <img src={img.i} >
-
-                </div>
-            </template>
-        </div>
-
-        <div class="insCard">
-            <lightning-icon icon-name='standard:social' alternative-text='social' size='medium' title='social'></lightning-icon>
-            <h1>Instagram</h1>
-            <h3>@commerce</h3>
-            <button type="button">Follow</button>
-        </div>
-        <div class="submitArea">
-            <div class="subAreaText">
-                <h2>Follow our updated</h2>
-                <p>If you want to get an email from us every time we have a new special offer, then sign up here!</p>
-            </div>
-            <div class="subEnter">
-                <input type="text">
-                <button type="submit">Send</button>
-            </div>
-        </div>
-
-
-    </section>
-
-
-
-    <footer>
-        <div class="sMenu">
-            <div class="brandC">
-                <div class="brandImg"><img src={logo} alt=""></div>
-                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate error, hic optio reiciendis totam voluptatibus.</div>
-            </div>
-            <div class="fCatagories">
-                <h2>Catagories</h2>
-                <ul>
-                    <li><a href="http://">Sneakers</a></li>
-                    <li><a href="http://">Jackets</a></li>
-                    <li><a href="http://">Outdoor Shop</a></li>
-                    <li><a href="http://">Pants</a></li>
-                    <li><a href="http://">Shirts & Tops</a></li>
-                </ul>
-            </div>
-            <div class="accountMenu">
-                <h2>Account</h2>
-                <div >
+            <div class="disContainer">
+                <div class="disCatagory">
                     <ul>
-                        <li><a href="http://">Orders</a></li>
-                        <li><a href="http://">Favorites</a></li>
-                        <li><a href="http://">Log In</a></li>
-                        <li><a href="http://">Register</a></li>
+                        <li class="man" onclick={handleMouseEnter}>Man</li>
+                        <li class="woman" onclick={handleMouseEnter}>Woman</li>
+                        <li class="special" onclick= {handleMouseEnter}>Special</li>
+                        <li class="kid" onclick= {handleMouseEnter}>Kid</li>
                     </ul>
-
+                    <div class="popCards1 gallery2" >
+                        <template for:each={products} for:item="product" for:index="index" >
+                            <div key={product.name} class="productCard1">
+                                <img src={product.image} alt={product.name}>
+                                <div class="pname">{product.name}</div>
+                                <div class="pprice">{product.price}TL</div>
+                            </div>
+                        </template>
+                    </div>
                 </div>
             </div>
-            <div class="fContact">
-                <h2>Contact Info</h2>
-                <ul>
-                    <li><img src="" alt=""> <span>Lorem ipsum dolor sit amet, consectetur.</span></li>
-                    <li><img src="" alt=""> <span>7474747474747.</span></li>
-                    <li><img src="" alt=""> <span>info@gmail.com</span></li>
+        </section>
+        <section class="news">
+            <div class="pp">
+                <h2>Latest News</h2>
+            </div>
+            <div class="newscards">
+                <div class="newsCard">
+                    <img src={i1} alt="">
+                    <h3>Lorem ipsum dolor.</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
 
+                    <div class="comment">
+                        <img src={login} alt="">
+                        <p>comment</p>
+                    </div>
+                    <a href="">Read More</a>
+                </div>
+                <div class="newsCard">
+                    <img src={i1} alt="">
+                    <h3>Lorem ipsum dolor.</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                    <div class="comment">
+                        <img src={login} alt="">
+                        <p>comment</p>
+                        </div>
+                        <a href="">Read More</a>
+                    </div>
+                    <div class="newsCard">
+                        <img src={i1} alt="">
+                        <h3>Lorem ipsum dolor.</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                        <div class="comment">
+                            <img src={login} alt="">
+                            <p>comment</p>
+                        </div>
+                        <a href="">Read More</a>
+                    </div>
+                </div>
+        </section>
+        <section class="instagramSection">
+            <div class=" gallery3 insRow1" >
+                <template for:each={imgs} for:item="img" for:index="index" >
+                    <div key={img.i} class="imgCard">
+                        <img src={img.i} >
 
-                </ul>
+                    </div>
+                </template>
             </div>
-            <div class="policy">
-                <h2>Policy</h2>
-                <ul>
-                    <li><a href="http://">Return Policy</a></li>
-                    <li><a href="http://">Terms Of Use</a></li>
-                    <li><a href="http://">Security</a></li>
-                    <li><a href="http://">Privacy</a></li>
-                    <li><a href="http://">Sitemap</a></li>
-                    <li><a href="http://">EPR Compliance</a></li>
-                </ul>
+            <div class=" gallery3 insRow2" >
+                <template for:each={revimgs} for:item="img" for:index="index">
+                    <div key={img.i} class="imgCard">
+                        <img src={img.i} >
+
+                    </div>
+                </template>
             </div>
-            <div class="helpCard">
-                <h2>Help</h2>
-                <ul>
-                    <li><a href="http://">Payments</a></li>
-                    <li><a href="http://">Shipping</a></li>
-                    <li><a href="http://">Cancellation & Returns</a></li>
-                    <li><a href="http://">FAQ</a></li>
-                </ul>
+
+            <div class="insCard">
+                <lightning-icon icon-name='standard:social' alternative-text='social' size='medium' title='social'></lightning-icon>
+                <h1>Instagram</h1>
+                <h3>@commerce</h3>
+                <button type="button">Follow</button>
             </div>
-        </div>
-    </footer>
+            <div class="submitArea">
+                <div class="subAreaText">
+                    <h2>Follow our updated</h2>
+                    <p>If you want to get an email from us every time we have a new special offer, then sign up here!</p>
+                </div>
+                <div class="subEnter">
+                    <input type="text">
+                    <button type="submit">Send</button>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <c-footer></c-footer>
+        </footer>
     </section>
 </template>
 

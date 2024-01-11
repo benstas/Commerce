@@ -1,0 +1,54 @@
+<template>
+    <header>
+        <nav>
+            <div class="searchBar">
+
+                <div><img src={logo} class="logo"></div>
+                <div class="searchbox">
+                    <input onchange={changeHandler} value={searchTerm} type="text">
+                    <button type="button"  onclick={handleClick} class="search">Search</button>
+                </div>
+                <div class="basketIcons">
+                    <div><a class="cc" href="https://commerce-selim-tas-dev-ed.develop.my.site.com/commerce/account">Login</a></div>
+                    <div><a class="cc" href="https://commerce-selim-tas-dev-ed.develop.my.site.com/commerce/favorites">My Account</a></div>
+                    <div><a class="cc" href="https://commerce-selim-tas-dev-ed.develop.my.site.com/commerce/favorites">Wishlist</a></div>
+                    <div>
+                        <a class="cc" href="https://commerce-selim-tas-dev-ed.develop.my.site.com/commerce/cart">
+                            <div class="numberCart">{numberofItemOnCart}</div>
+                            <div>Cart</div>
+                            <lightning-icon icon-name='utility:cart' alternative-text='cart' size='small' title='cart'></lightning-icon>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="catagory">
+                <div class="menu">
+                    <ul>
+                        <li><a href="https://commerce-selim-tas-dev-ed.develop.my.site.com/commerce">Home</a></li>
+                        <li>About Us</li>
+                        <li>Pages</li>
+                        <li>Shop</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+                <div class="catagoryButton" onmouseover= {displayCatagory} >
+                    <lightning-icon icon-name='utility:fulfillment_order' alternative-text='fulfillment_order' size='small' title='fulfillment_order'></lightning-icon>
+                    <p>All Catagory</p>
+                </div>
+            </div>
+            <div class="popMenu" onmouseleave={hideCatagory}>
+                <ul>
+                    <li>Shirt</li>
+                    <li>Tshirt</li>
+                    <li>Woman</li>
+                    <li>Men</li>
+                    <li>Summer</li>
+                    <li>Winter</li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+</template>

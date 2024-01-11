@@ -1,53 +1,7 @@
 <template>
-        <header>
-            <div class="headerInfo">
-                <div>Welcome To Store</div>
-                <div class="contactInfo">
-                    <div class="contactInfo">
-                        <div><img src={phone} class="hcc"></div>
-                        <div>+83838383838</div>
-
-                    </div>
-                    <div class="contactInfo">
-                        <div><img src={user} class="hcc"></div>
-                        <div>info@gmail.com</div>
-                    </div>
-                </div>
-            </div>
-
-
-            <nav>
-                <div class="searchBar">
-
-                    <div><img src={logo} class="logo"></div>
-                    <div class="searchbox">
-                        <input type="text">
-                        <div class="search"><p>Search</p></div>
-                    </div>
-                    <div class="basketIcons">
-                        <a class="cc" href="https://commerce-selim-tas-dev-ed.develop.my.site.com/commerce/account"><lightning-icon icon-name='utility:user' alternative-text='user' size='small' title='user'></lightning-icon></a>
-                        <a class="cc" href="https://commerce-selim-tas-dev-ed.develop.my.site.com/commerce/favorites"><lightning-icon icon-name='utility:favorite' alternative-text='favorite' size='small' title='favorite'></lightning-icon></a>
-                        <a class="cc" href="https://commerce-selim-tas-dev-ed.develop.my.site.com/commerce/cart"><div class="numberCart">{numberofItemOnCart}</div><lightning-icon icon-name='utility:cart' alternative-text='cart' size='small' title='cart'></lightning-icon></a>
-
-                    </div>
-
-                </div>
-                <div class="catagory">
-                    <div class="catagoryButton" onclick={catagoryHandler}>
-                        <lightning-icon icon-name='utility:fulfillment_order' alternative-text='fulfillment_order' size='small' title='fulfillment_order'></lightning-icon>
-                        <p>All Catagory</p>
-                    </div>
-                    <ul>
-                        <li><a href="https://commerce-selim-tas-dev-ed.develop.my.site.com/commerce">Home</a></li>
-                        <li>About Us</li>
-                        <li>Pages</li>
-                        <li>Shop</li>
-                        <li>Contact</li>
-                    </ul>
-                </div>
-
-            </nav>
-        </header>
+    <header>
+        <c-header></c-header>
+    </header>
         <section class="title">
             <img src={i9} alt="">
         </section>
@@ -107,4 +61,7 @@
         </div>
     </section>
 
+    <footer>
+        <c-footer></c-footer>
+    </footer>
 </template>

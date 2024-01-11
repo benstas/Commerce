@@ -1,0 +1,21 @@
+.sMenu {
+  display: flex;
+  gap: 5rem;
+}
+
+.sMenu h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.sMenu li {
+    font-size: 0.8rem;
+    margin: 0.4rem 0;
+}
+.brandC{
+    text-align: left;
+    width: 15vw;
+}
+.brandImg{
+    width:5rem;
+    margin-bottom: 2rem;
+}

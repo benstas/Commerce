@@ -1,9 +1,7 @@
-/**
- * Created by macbook on 25.12.2023.
- */
-
 import { LightningElement, wire, track } from 'lwc';
 import siteImage from '@salesforce/resourceUrl/siteImage'
+import getPopularProduct from "@salesforce/apex/ProductHandler.getPopularProduct";
+
 
 export default class Website extends LightningElement {
     i1 = `${siteImage}/siteImage/i1.jpg`
@@ -123,6 +121,45 @@ export default class Website extends LightningElement {
             ];
 
 
+            @track popularProducts = [];
+            connectedCallback(){
+                this.popularProductData();
+            }
+            popularProductData() {
+                getPopularProduct()
+                  .then((result) => {
+                    this.popularProducts = this.formatProducts(result);
+                    this.errors = undefined;
+                  })
+                  .catch((error) => {
+                    this.popularProducts = undefined;
+                    this.errors = JSON.stringify(error);
+                  });
+              }
+              formatProducts(popularProducts) {
+                return popularProducts.map((popularProducts) => {
+                  return {
+                    id: popularProducts.Id,
+                    price: popularProducts.Price__c,
+                    catagory: popularProducts.Catagory__c,
+                    name: popularProducts.Site_Name__c,
+                  };
+                });
+              }
+              @track cartList = [];
+              get numberofItemOnCart() {
+                return this.cartList.length;
+              }
+
+
+
+
+
+
+
+
+
+
     displayCatagory(event){
         const showcatagory = this.template.querySelector('.popMenu');
         const slider = this.template.querySelector('c-custom-carousel')
@@ -148,6 +185,31 @@ export default class Website extends LightningElement {
 
        this.scrollGallery(scrollAmount);
    }
+    scrollGallery(change) {
+                     const gallery = this.template.querySelector('.gallery');
+                     const startTime = performance.now();
+                     const startScroll = gallery.scrollLeft;
+                     const duration = 1000; // Geçiş süresi (ms) - 3 saniye olarak ayarlandı
+
+                     function updateGallery(timestamp) {
+                         const elapsed = timestamp - startTime;
+                         gallery.scrollLeft = easeInOut(elapsed, startScroll, change, duration);
+
+                         if (elapsed < duration) {
+                             requestAnimationFrame(updateGallery);
+                         }
+                     }
+
+                     function easeInOut(t, b, c, d) {
+                         // Easing fonksiyonu (isteğe bağlı olarak kullanabilirsiniz)
+                         t /= d / 2;
+                         if (t < 1) return (c / 2) * t * t + b;
+                         t--;
+                         return (-c / 2) * (t * (t - 2) - 1) + b;
+                     }
+
+                     requestAnimationFrame(updateGallery);
+                 }
 
 
 

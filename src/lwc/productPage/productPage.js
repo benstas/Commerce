@@ -1,7 +1,6 @@
-import { LightningElement, track } from "lwc";
+import { LightningElement, track, api } from "lwc";
 import siteImage from "@salesforce/resourceUrl/siteImage";
 import getProduct from "@salesforce/apex/ProductHandler.getProduct";
-import createCart from "@salesforce/apex/ChartHandler.createCart";
 export default class ProductPage extends LightningElement {
   i1 = `${siteImage}/siteImage/i1.jpg`;
   i2 = `${siteImage}/siteImage/i2.jpg`;
@@ -25,7 +24,7 @@ export default class ProductPage extends LightningElement {
   trust = `${siteImage}/siteImage/trust.png`;
   forward = `${siteImage}/siteImage/forward.png`;
 
-  products = [
+  @api products = [
     {
       image: this.i1,
       name: "lorem1",
@@ -62,6 +61,28 @@ export default class ProductPage extends LightningElement {
       price: 100,
     },
   ];
+   @api tryproducts = [
+      {
+        name: "lorem1",
+        price: 100,
+        count: "2",
+      },
+      {
+              name: "lorem1",
+              price: 100,
+              count: "2",
+            },
+            {
+                    name: "lorem1",
+                    price: 100,
+                    count: "2",
+                  },
+                  {
+                            name: "lorem1",
+                            price: 100,
+                            count: "2",
+                          },
+    ];
 
   @track siteProducts = [];
 
@@ -123,7 +144,9 @@ export default class ProductPage extends LightningElement {
         count: 1,
       });
     }
+    console.log(JSON.stringify(this.cartList));
     localStorage.setItem("cartList", JSON.stringify(this.cartList));
+
   };
 
   removeFromCart(productIdToRemove) {

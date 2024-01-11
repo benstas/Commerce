@@ -1,0 +1,86 @@
+.popMenu {
+  transition: height 0.6s linear;
+  position: absolute;
+  top: 19vh;
+  right: 0;
+  width: 25vw;
+  height: 0;
+  background-color: #e2dada;
+  z-index: 2;
+  font-size: 1.7rem;
+  overflow-y:hidden;
+}
+.popMenu ul{
+    text-align: left;
+    padding: 1.6rem;
+}
+.popMenu li{
+    margin: 1rem;
+    font-weight: 200;
+}
+.searchBar {
+    display: flex;
+    height: 9vh;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    padding: 0.4rem 1rem;
+}
+
+.basketIcons {
+  display: flex;
+  gap:1.7rem;
+}
+.logo {
+  width: 3rem;
+  height: auto;
+}
+.hcc {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.cc {
+  width: 5rem;
+  height: 5rem;
+}
+.searchbox {
+  display: flex;
+  height: 2rem;
+}
+.search {
+  width: 7rem;
+  background: red;
+  color: white;
+}
+
+input {
+  width: 20vw;
+}
+.catagory {
+    display: flex;
+    height: 10vh;
+    margin-bottom: 2rem;
+    background-color: #352544;
+    color: white;
+    font-size: 1.3rem;
+}
+.catagory ul {
+  display: flex;
+  gap: 1rem;
+}
+.catagoryButton {
+  background: red;
+  color: white;
+  width: 25vw;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.menu{
+    width: 75%;
+    align-self: center;
+    padding-left: 1rem;
+}/**
+ * Created by macbook on 10.01.2024.
+ */
