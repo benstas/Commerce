@@ -31,10 +31,20 @@
 
         </div>
         <div class="pr">
-            <div>OrderPiclist</div>
+            <div>
+                <label for="order-select">Order By</label>
+                <select name="order" id="order-select" onchange={handleOrderChange}>
+                    <option value="default">Default</option>
+                    <option value="decPrice">Decreasing price</option>
+                    <option value="incPrice">Increasing price</option>
+                    <option value="comment">Number of comments</option>
+                    <option value="favorited">Most favorited</option>
+                    <option value="selling">Best selling</option>
+                </select>
+            </div>
             <div class="productCards">
                 <template for:each={siteProducts} for:item="product" for:index="index" >
-                    <div key={product.id} class="productCard">
+                    <div key={product.id} class="productCard" data-productid={product.id} onclick={navigateProductDetail}>
                         <img src={i3} alt={product.name}>
                         <div class="cardDetail">
                             <div class="pname pp">{product.name}</div>
@@ -51,7 +61,7 @@
         <div class="cartPop">
             <lightning-icon class="closeIcon" onclick={popcartClose}  icon-name='utility:close' alternative-text='close' size='medium' title='close'></lightning-icon>
             <template for:each={cartList} for:item="cl">
-                <div key={cl.id} class="cartPopCard">
+                <div key={cl.id} class="cartPopCard" >
                     <img src={i3} >
                     <div class="cpCardDetail">
                         <div class="cpname ">{cl.name}</div>

@@ -1,7 +1,8 @@
 import { LightningElement, track, api } from "lwc";
+import {NavigationMixin} from 'lightning/navigation'
 import siteImage from "@salesforce/resourceUrl/siteImage";
 import getProduct from "@salesforce/apex/ProductHandler.getProduct";
-export default class ProductPage extends LightningElement {
+export default class ProductPage extends NavigationMixin(LightningElement) {
   i1 = `${siteImage}/siteImage/i1.jpg`;
   i2 = `${siteImage}/siteImage/i2.jpg`;
   i3 = `${siteImage}/siteImage/i3.jpg`;
@@ -170,4 +171,54 @@ export default class ProductPage extends LightningElement {
       0
     );
   }
+
+   handleOrderChange(event) {
+          // Seçilen değeri al
+          const selectedValue = event.target.value;
+
+          // Seçilen değere göre işlem yap
+          switch (selectedValue) {
+              case "default":
+                  // Default durumunu işle
+                  console.log("Default selected");
+                  break;
+              case "decPrice":
+                  // Decreasing price durumunu işle
+                  console.log("Decreasing price selected");
+                  break;
+              case "incPrice":
+                  // Increasing price durumunu işle
+                  console.log("Increasing price selected");
+                  break;
+              case "comment":
+                  // Number of comments durumunu işle
+                  console.log("Number of comments selected");
+                  break;
+              case "favorited":
+                  // Most favorited durumunu işle
+                  console.log("Most favorited selected");
+                  break;
+              case "selling":
+                  // Best selling durumunu işle
+                  console.log("Best selling selected");
+                  break;
+              default:
+                  // Varsayılan durumu işle
+                  console.log("Unknown selection");
+          }
+      }
+
+      navigateProductDetail(event){
+          let productDetailId=event.currentTarget.dataset.productid
+
+          this[NavigationMixin.Navigate]({
+              type: "standard__webPage",
+              attributes:{
+                  url: '/productdetail?productId=' + productDetailId,
+              },
+
+          });
+      }
+
+
 }

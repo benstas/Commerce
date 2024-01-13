@@ -31,14 +31,13 @@
         <div class="pr">
             <div>OrderPiclist</div>
             <div class="productCards">
-                <template for:each={productResult} for:item="product" for:index="index" >
+                <template for:each={siteProducts} for:item="product" for:index="index" >
                     <div key={product.id} class="productCard">
                         <img src={i4} alt={product.name}>
                         <div class="cardDetail">
                             <div class="pname pp">{product.name}</div>
                             <div class="pprice pp">{product.price}TL</div>
                             <div class="detail pp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, eligendi. Lorem ipsum dolor sit amet.</div>
-                            <div class="button" data-productid={product.id} data-productname={product.name} data-productprice={product.price} onclick={addToCart}>Add to Cart</div>
                         </div>
                     </div>
                 </template>

@@ -20,7 +20,7 @@
 }
 .searchBar {
     display: flex;
-    height: 9vh;
+    height: 14vh;
     justify-content: space-between;
     background-color: white;
     align-items: center;
@@ -81,6 +81,21 @@ input {
     width: 75%;
     align-self: center;
     padding-left: 1rem;
-}/**
- * Created by macbook on 10.01.2024.
- */
+}
+.basket{
+    display:flex;
+    position: relative;
+    gap: 0.5rem;
+}
+.numberCart{
+    position: absolute;
+    right: -1rem;
+    top: 1rem;
+    font-size: 1.1rem;
+    color:white;
+    background-color: burlywood;
+    border-radius: 180px;
+    height: 1.3rem;
+    width: 1.3rem;
+    text-align-last: center;
+}

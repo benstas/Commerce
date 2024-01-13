@@ -15,7 +15,6 @@ export default class Website extends LightningElement {
     i9 = `${siteImage}/siteImage/i9.jpg`
     i10 = `${siteImage}/siteImage/i10.jpg`
     i11 = `${siteImage}/siteImage/i11.jpg`
-    logo = `${siteImage}/siteImage/logo.png`
     login = `${siteImage}/siteImage/login.png`
     user = `${siteImage}/siteImage/user.png`
     phone = `${siteImage}/siteImage/phone.png`
@@ -153,25 +152,6 @@ export default class Website extends LightningElement {
 
 
 
-
-
-
-
-
-
-
-    displayCatagory(event){
-        const showcatagory = this.template.querySelector('.popMenu');
-        const slider = this.template.querySelector('c-custom-carousel')
-        showcatagory.style.height='85vh';
-        slider.style.width='74%';
-    }
-    hideCatagory(event){
-        const hidecatagory = this.template.querySelector('.popMenu');
-        hidecatagory.style.height='0';
-        const slider = this.template.querySelector('c-custom-carousel')
-        slider.style.width='100%';
-    }
 
    handleBackClick() {
        const viewportWidth = window.innerWidth; // Viewport genişliğini alır

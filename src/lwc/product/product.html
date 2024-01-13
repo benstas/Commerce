@@ -1,0 +1,73 @@
+<template>
+    <section class="site">
+        <header>
+            <c-header></c-header>
+        </header>
+        <section class="productCardSection">
+            <div class="flexCard">
+                <div class="productImg">
+                    <div class="firstImg"><img src={i1} alt="" srcset=""></div>
+                    <div class="othImg">
+                        <img src={i1} alt="" srcset="">
+                        <img src={i1} alt="" srcset="">
+                    </div>
+                </div>
+                <div class="productDetail">
+                    <div><h1>Name</h1></div>
+                    <div><h3>Price</h3></div>
+                    <div class="detailText">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab blanditiis consequatur enim laudantium magnam modi nostrum quasi quos sed voluptates.</p>
+                    </div>
+                    <div class="flexCard2">
+                        <div>
+                            <div class="setStock">Avability: In stock</div>
+                            <div>
+                                <div class="countSet">
+                                    <lightning-icon onclick={decCount} data-productid="" icon-name='utility:dash' alternative-text='dash' size='x-small' title='dash'></lightning-icon>
+                                    <span>1</span>
+                                    <lightning-icon data-productid="" onclick={incCount} icon-name='utility:add' alternative-text='add' size='x-small' title='add'></lightning-icon>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button type="submit">Add To Cart</button>
+                        </div>
+                    </div>
+                    <div>icons ------------------------------------------------------------------</div>
+                </div>
+
+            </div>
+
+
+        </section>
+        <section class="commentInfoSection">
+            <ul class=commentInfoFlex>
+                <li>Additional Info</li>
+                <li>Reviews</li>
+            </ul>
+            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi corporis expedita id maiores molestiae nihil officia, quaerat quos ratione voluptates.</div>
+        </section>
+        <section class="relatedProducts">
+                <div class="pp">
+                    <h2>Related Products</h2>
+                </div>
+                <div>
+                    <div class="popCards gallery" >
+                        <template for:each={popularProducts} for:item="product" for:index="index" class="row1">
+                            <div key={product.name} class="productCard">
+                                <img src={i3} >
+                                <div class="pname">{product.name}</div>
+                                <div class="pprice">{product.price}TL</div>
+                                <div class="button" data-productid={product.id} data-productname={product.name} data-productprice={product.price} onclick={addToCart}>Add to Cart</div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+        </section>
+        <section>
+            <c-footer></c-footer>
+        </section>
+
+    </section>
+
+</template>

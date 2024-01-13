@@ -5,19 +5,18 @@
 
                 <div><img src={logo} class="logo"></div>
                 <div class="searchbox">
-                    <input onchange={changeHandler} value={searchTerm} type="text">
+                    <input onchange={changeHandler}  placeholder="Find Product" type="text">
                     <button type="button"  onclick={handleClick} class="search">Search</button>
                 </div>
                 <div class="basketIcons">
-                    <div><a class="cc" href="https://commerce-selim-tas-dev-ed.develop.my.site.com/commerce/account">Login</a></div>
-                    <div><a class="cc" href="https://commerce-selim-tas-dev-ed.develop.my.site.com/commerce/favorites">My Account</a></div>
-                    <div><a class="cc" href="https://commerce-selim-tas-dev-ed.develop.my.site.com/commerce/favorites">Wishlist</a></div>
-                    <div>
-                        <a class="cc" href="https://commerce-selim-tas-dev-ed.develop.my.site.com/commerce/cart">
-                            <div class="numberCart">{numberofItemOnCart}</div>
-                            <div>Cart</div>
-                            <lightning-icon icon-name='utility:cart' alternative-text='cart' size='small' title='cart'></lightning-icon>
-                        </a>
+                    <div class="cc">Login</div>
+                    <div class="cc">My Account</a></div>
+                    <div class="cc">Wishlist</div>
+                    <div class="basket">
+                        <div class="numberCart">{numberofItemOnCart}</div>
+                        <div>Cart</div>
+                        <div><lightning-icon icon-name='utility:cart' alternative-text='cart' size='small' title='cart'></lightning-icon>
+                        </div>
                     </div>
 
                 </div>
