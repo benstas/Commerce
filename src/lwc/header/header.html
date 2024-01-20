@@ -3,17 +3,17 @@
         <nav>
             <div class="searchBar">
 
-                <div><img src={logo} class="logo"></div>
+                <div onclick={navigateHome}><img src={logo} class="logo"></div>
                 <div class="searchbox">
                     <input onchange={changeHandler}  placeholder="Find Product" type="text">
                     <button type="button"  onclick={handleClick} class="search">Search</button>
                 </div>
                 <div class="basketIcons">
-                    <div class="cc">Login</div>
-                    <div class="cc">My Account</a></div>
-                    <div class="cc">Wishlist</div>
-                    <div class="basket">
-                        <div class="numberCart">{numberofItemOnCart}</div>
+                    <div class="navItem" onclick={navigateLogin}>Login</div>
+                    <div class="navItem" onclick={navigateLogin}>My Account</a></div>
+                    <div class="navItem" onclick={navigateLogin}>Wishlist</div>
+                    <div class="basket navItem" >
+                        <div class="numberCart " >{numberofItemOnCart}</div>
                         <div>Cart</div>
                         <div><lightning-icon icon-name='utility:cart' alternative-text='cart' size='small' title='cart'></lightning-icon>
                         </div>
@@ -25,11 +25,10 @@
             <div class="catagory">
                 <div class="menu">
                     <ul>
-                        <li><a href="https://commerce-selim-tas-dev-ed.develop.my.site.com/commerce">Home</a></li>
-                        <li>About Us</li>
-                        <li>Pages</li>
-                        <li>Shop</li>
-                        <li>Contact</li>
+                        <li onclick={navigateHome}>Home</li>
+                        <li onclick={navigateHome}>About Us</li>
+                        <li onclick={navigateProducts}>Shop</li>
+                        <li onclick={navigateHome}>Contact</li>
                     </ul>
                 </div>
                 <div class="catagoryButton" onmouseover= {displayCatagory} >
@@ -39,12 +38,12 @@
             </div>
             <div class="popMenu" onmouseleave={hideCatagory}>
                 <ul>
-                    <li>Shirt</li>
-                    <li>Tshirt</li>
-                    <li>Woman</li>
-                    <li>Men</li>
-                    <li>Summer</li>
-                    <li>Winter</li>
+                    <li onclick={navigateProducts}>Shirt</li>
+                    <li onclick={navigateProducts}>Tshirt</li>
+                    <li onclick={navigateProducts}>Woman</li>
+                    <li onclick={navigateProducts}>Men</li>
+                    <li onclick={navigateProducts}>Summer</li>
+                    <li onclick={navigateProducts}>Winter</li>
                 </ul>
             </div>
 

@@ -1,38 +1,21 @@
 import { LightningElement, track } from "lwc";
 import siteImage from "@salesforce/resourceUrl/siteImage";
-import getProduct from "@salesforce/apex/ProductHandler.getProduct";
 
 export default class CartPage extends LightningElement {
-  i1 = `${siteImage}/siteImage/i1.jpg`;
-  i2 = `${siteImage}/siteImage/i2.jpg`;
-  i3 = `${siteImage}/siteImage/i3.jpg`;
-  i4 = `${siteImage}/siteImage/i4.jpg`;
   i5 = `${siteImage}/siteImage/i5.jpg`;
-  i6 = `${siteImage}/siteImage/i6.jpg`;
-  i7 = `${siteImage}/siteImage/i7.jpg`;
-  i8 = `${siteImage}/siteImage/i8.jpg`;
   i9 = `${siteImage}/siteImage/i9.jpg`;
-  i10 = `${siteImage}/siteImage/i10.jpg`;
-  i11 = `${siteImage}/siteImage/i11.jpg`;
-  logo = `${siteImage}/siteImage/logo.png`;
-  login = `${siteImage}/siteImage/login.png`;
-  user = `${siteImage}/siteImage/user.png`;
-  phone = `${siteImage}/siteImage/phone.png`;
-  back = `${siteImage}/siteImage/back.png`;
-  support = `${siteImage}/siteImage/customer-support.png`;
-  delivery = `${siteImage}/siteImage/delivery.png`;
-  payment = `${siteImage}/siteImage/payment-method.png`;
-  trust = `${siteImage}/siteImage/trust.png`;
-  forward = `${siteImage}/siteImage/forward.png`;
+//--------------------------------------------------------------------------------
+    @track cartList = [];
 
-  @track cartList = [];
+  //--------------------------------------------------------------------------------
+
   connectedCallback() {
     let storedCartList = localStorage.getItem("cartList");
     if (storedCartList) {
       this.cartList = JSON.parse(storedCartList);
     }
   }
-
+//--------------------------------------------------------------------------------
   removeFromCart(productIdToRemove) {
     this.cartList = this.cartList.filter(
       (item) => item.id !== productIdToRemove

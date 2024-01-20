@@ -3,7 +3,10 @@
         <header>
             <c-header></c-header>
         </header>
+        <template for:each={productDetail} for:item="cl">
+            <div  key={cl.id}>
         <section class="productCardSection">
+
             <div class="flexCard">
                 <div class="productImg">
                     <div class="firstImg"><img src={i1} alt="" srcset=""></div>
@@ -13,8 +16,8 @@
                     </div>
                 </div>
                 <div class="productDetail">
-                    <div><h1>Name</h1></div>
-                    <div><h3>Price</h3></div>
+                    <div><h1>{cl.name}</h1></div>
+                    <div><h3>{cl.price}</h3></div>
                     <div class="detailText">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab blanditiis consequatur enim laudantium magnam modi nostrum quasi quos sed voluptates.</p>
                     </div>
@@ -47,6 +50,8 @@
             </ul>
             <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi corporis expedita id maiores molestiae nihil officia, quaerat quos ratione voluptates.</div>
         </section>
+            </div>
+        </template>
         <section class="relatedProducts">
                 <div class="pp">
                     <h2>Related Products</h2>
@@ -64,6 +69,7 @@
                     </div>
                 </div>
         </section>
+
         <section>
             <c-footer></c-footer>
         </section>

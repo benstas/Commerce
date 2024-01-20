@@ -1,12 +1,12 @@
 <template>
-    <section class="site">
+    <section class="siteSection">
         <header>
             <c-header  ></c-header>
         </header>
-        <section class="banner">
-            <c-custom-carousel slides-data={slides}  ></c-custom-carousel>
+        <section class="bannerSection">
+            <c-custom-carousel slides-data={slides}></c-custom-carousel>
         </section>
-        <section class="summerIcon">
+        <section class="summerIconSection">
                 <div class="kCard">
                     <img src={delivery} alt="">
                     <div class="kk">
@@ -37,11 +37,11 @@
                 </div>
 
             </section>
-        <section class="men-woman-card">
+        <section class="m-w-cardSection">
             <div class="sCard"><div class="sCardText">Men Fashion</div><img src={i6} alt=""></div>
             <div class="sCard"><div class="sCardText">Woman Fashion</div><img src={i9} alt=""> </div>
         </section>
-        <section class="popularItemsCards">
+        <section class="popularItemsSection">
             <div class="pp">
                 <h2>Popular Products</h2>
                 <div class="rowButtons">
@@ -52,7 +52,7 @@
             <div>
                 <div class="popCards gallery" >
                     <template for:each={popularProducts} for:item="product" for:index="index" class="row1">
-                        <div key={product.name} class="productCard">
+                        <div key={product.name} class="productCard" data-productid={product.id} onclick={navigateProductDetail}>
                             <img src={i3} >
                             <div class="pname">{product.name}</div>
                             <div class="pprice">{product.price}TL</div>
@@ -62,7 +62,7 @@
                 </div>
             </div>
         </section>
-        <section class="commentArea">
+        <section class="commentAreaSection">
             <div class="commentCard">
                 <div><h1>Mehmet Lale</h1></div>
                 <div><h2>2 yıldır üye</h2></div>
@@ -76,7 +76,7 @@
                 <img src={i9} alt="">
             </div>
         </section>
-        <section class="discount">
+        <section class="discountItemSection">
             <div class="pp">
                 <h2>products on sale</h2>
                 <div class="rowButtons">
@@ -93,18 +93,20 @@
                         <li class="kid" onclick= {handleMouseEnter}>Kid</li>
                     </ul>
                     <div class="popCards1 gallery2" >
-                        <template for:each={products} for:item="product" for:index="index" >
-                            <div key={product.name} class="productCard1">
-                                <img src={product.image} alt={product.name}>
+                        <template for:each={popularProducts} for:item="product" for:index="index" >
+                            <div key={product.name} class="productCard1" data-productid={product.id} onclick={navigateProductDetail}>
+                                <img src={i4} alt={product.name}>
                                 <div class="pname">{product.name}</div>
                                 <div class="pprice">{product.price}TL</div>
+                                <div class="button" data-productid={product.id} data-productname={product.name} data-productprice={product.price} onclick={addToCart}>Add to Cart</div>
+
                             </div>
                         </template>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="news">
+        <section class="newsSection">
             <div class="pp">
                 <h2>Latest News</h2>
             </div>

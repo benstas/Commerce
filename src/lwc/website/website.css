@@ -1,112 +1,67 @@
-.site{
+.siteSection{
     background-color: #F1F3F6;
     text-align: -webkit-center;
+    overflow-x: hidden;
 }
-.popMenu {
-  transition: height 0.6s linear;
-  position: absolute;
-  top: 19vh;
-  right: 0;
-  width: 25vw;
-  height: 0;
-  background-color: #e2dada;
-  z-index: 2;
-  font-size: 1.7rem;
-  overflow-y:hidden;
-}
-.popMenu ul{
-    text-align: left;
-    padding: 1.6rem;
-}
-.popMenu li{
-    margin: 1rem;
-    font-weight: 200;
-}
-.searchBar {
-    display: flex;
-    height: 9vh;
-    justify-content: space-between;
-    background-color: white;
-    align-items: center;
-    padding: 0.4rem 1rem;
-}
+c-custom-carousel{
+    width:100%;
+    transition: width 0.6s ease;
 
-.basketIcons {
-  display: flex;
-  gap:1.7rem;
 }
-.logo {
-  width: 3rem;
-  height: auto;
-}
-.hcc {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-.cc {
-  width: 5rem;
-  height: 5rem;
-}
-.searchbox {
-  display: flex;
-  height: 2rem;
-}
-.search {
-  width: 7rem;
-  background: red;
-  color: white;
-}
-
-input {
-  width: 20vw;
-}
-.catagory {
-    display: flex;
-    height: 10vh;
-    margin-bottom: 2rem;
-    background-color: #352544;
-    color: white;
-    font-size: 1.3rem;
-}
-.catagory ul {
-  display: flex;
-  gap: 1rem;
-}
-.catagoryButton {
-  background: red;
-  color: white;
-  width: 25vw;
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  align-items: center;
-}
-.menu{
-    width: 75%;
-    align-self: center;
-    padding-left: 1rem;
-}
-.banner {
-  display: flex;
-  gap: 4rem;
-}
-.bannerside {
-  width: 39vw;
-}
-.bannerside img {
-  height: 80vh;
-  object-fit: cover;
-}
-.men-woman-card {
+/*-----bannerSection----------------------------------------------------------------------*/
+.bannerSection {
       display: flex;
-      gap: 3rem;
-      justify-content: center;
-      background-color: white;
-      margin-top: 1.5rem;
-      width: 92vw;
-      height: 67vh;
-      align-items: center;
-      padding: 1rem;
+      gap: 4rem;
+
+}
+/*------summerIconSection---------------------------------------------------------------------*/
+
+.summerIconSection {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  background-color: white;
+  width: 92vw;
+  align-items: center;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.20000000298023224);
+
+}
+.kCard {
+  display: flex;
+  width: 25rem;
+  height: 6rem;
+  justify-content: center;
+  padding: 0.4rem;
+}
+.kCard img {
+  width: 4rem;
+  height: 4rem;
+}
+.kCard h2 {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.kCard h3{
+    font-size: 0.7rem;
+}
+.kk {
+      padding: 1rem 3rem;
+      border-right: 1px solid gray;
+}
+
+
+/*------m-w-cardSection---------------------------------------------------------------------*/
+
+.m-w-cardSection {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    background-color: white;
+    margin-top: 1.5rem;
+    width: 92vw;
+    height: 67vh;
+    align-items: center;
+    padding: 1rem;
     box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.20000000298023224);
 
 }
@@ -118,14 +73,30 @@ input {
   height: 50vh;
   object-fit: cover;
 }
+.sCard{
+    position:relative;
+}
+.sCardText{
+    position: absolute;
+    font-size: 2rem;
+    right: 4%;
+    top: 10%;
+    color: white;
+    border: solid 4px white;
+    padding: 5px;
+}
+
+/*------popularItemsSection---------------------------------------------------------------------*/
+.popularItemsSection{
+        background-color: white;
+        margin-top: 1.6rem;
+        width: 92vw;
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.20000000298023224);
+}
 .pp {
   display: flex;
   justify-content: space-between;
   padding: 2rem;
-}
-.disContainer{
-  height: 67vh;
-
 }
 .rowButtons {
   display: flex;
@@ -137,11 +108,22 @@ input {
 }
 .popCards {
   width: 90vw;
-      display: flex;
-      overflow-x: scroll;
-      margin: auto;
-      gap: 3rem;
-      height: 70vh;
+  display: flex;
+  overflow-x: scroll;
+  margin: auto;
+  gap: 3rem;
+  height: 75vh;
+}
+.popCard button{
+    width: 50%;
+    margin: 0.8rem auto;
+    border-radius: 1rem;
+    background-color: red;
+    color: white;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .productCard {
@@ -167,6 +149,63 @@ input {
   display: none;
 }
 
+/*------commentAreaSection---------------------------------------------------------------------*/
+
+.commentAreaSection{
+    padding: 3rem 4rem;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.20000000298023224);
+    width:92vw;
+    background-color: white;
+    margin-top: 1.5rem;
+    position: relative;
+}
+.commentCard{
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.20000000298023224);
+    position: relative;
+    padding-left: 5rem;
+    text-align: justify;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-radius: 1rem;
+}
+.commentAreaSection img{
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    object-fit: cover;
+    left: -2rem;
+    top: 25%;
+    border-radius: 1rem;
+}
+
+/*------discountItemSection---------------------------------------------------------------------*/
+.discountItemSection{
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.20000000298023224);
+    width: 92vw;
+    background-color: white;
+    margin-top: 1.6rem;
+    padding: 1rem;
+}
+.disCatagory {
+  display: flex;
+}
+.disCatagory li {
+  width: 20vw;
+  height: 11vh;
+  margin: 1rem 0;
+  border: 1px solid;
+  padding: 8% 2rem;
+  font-size: 1.6rem;
+}
+.disContainer{
+  height: 67vh;
+
+}
 .popCards1 {
     width: 70vw;
     display: flex;
@@ -196,36 +235,21 @@ input {
 .gallery2::-webkit-scrollbar {
   display: none;
 }
-.discount{
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.20000000298023224);
-    width: 92vw;
-    background-color: white;
-    margin-top: 1.6rem;
-    padding: 1rem;
-}
-.disCatagory {
-  display: flex;
-}
-.disCatagory li {
-  width: 20vw;
-  height: 11vh;
-  margin: 1rem 0;
-  border: 1px solid;
-  padding: 8% 2rem;
-  font-size: 1.6rem;
-}
+
+/*------newsSection---------------------------------------------------------------------*/
+
 .newscards {
   display: flex;
   justify-content: center;
   gap: 6rem;
   flex-wrap: wrap;
 }
-.news{
-        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.20000000298023224);
-        width: 92vw;
-        background-color: white;
-        margin-top: 1.6rem;
-        height: 82vh;
+.newsSection{
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.20000000298023224);
+  width: 92vw;
+  background-color: white;
+  margin-top: 1.6rem;
+  height: 82vh;
 }
 .newsCard {
   width: 20vw;
@@ -245,7 +269,6 @@ input {
 .newsCard p {
   font-size: 0.7rem;
 }
-
 .comment {
   display: flex;
 }
@@ -253,6 +276,8 @@ input {
   width: 1rem;
   height: auto;
 }
+
+/*------instagramSection---------------------------------------------------------------------*/
 .instagramSection{
     width: 92vw;
     margin-top: 1.6rem;
@@ -294,135 +319,7 @@ input {
     align-self: center;
     padding-right: 1rem;
 }
-.imgGallery {
-    display: flex;
 
-}
-.imgGallery img {
-  width: 14rem;
-  height: 14rem;
-  object-fit: cover;
-}
-.summerIcon {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-  background-color: white;
-  width: 92vw;
-  align-items: center;
-  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.20000000298023224);
-
-}
-.kCard {
-  display: flex;
-  width: 25rem;
-  height: 6rem;
-  justify-content: center;
-  padding: 0.4rem;
-}
-.kCard img {
-  width: 4rem;
-  height: 4rem;
-}
-.kCard h2 {
-  font-weight: 600;
-  font-size: 1.1rem;
-}
-.kCard h3{
-    font-size: 0.7rem;
-}
-.kk {
-      padding: 1rem 3rem;
-      border-right: 1px solid gray;
-}
-
-
-.sCard{
-    position:relative;
-}
-.sCardText{
-    position: absolute;
-    font-size: 2rem;
-    right: 4%;
-    top: 10%;
-    color: white;
-    border: solid 4px white;
-    padding: 5px;
-}
-.popularItemsCards{
-        background-color: white;
-        margin-top: 1.6rem;
-        width: 92vw;
-        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.20000000298023224);
-
-
-}
-
-.commentArea{
-    padding: 3rem 4rem;
-    display: flex;
-    gap: 4rem;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.20000000298023224);
-    width:92vw;
-    background-color: white;
-    margin-top: 1.5rem;
-    position: relative;
-}
-.commentCard{
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.20000000298023224);
-    position: relative;
-    padding-left: 5rem;
-    text-align: justify;
-    padding-right: 2rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    border-radius: 1rem;
-}
-.commentArea img{
-    position: absolute;
-    width: 6rem;
-    height: 6rem;
-    object-fit: cover;
-    left: -2rem;
-    top: 25%;
-    border-radius: 1rem;
-}
-.subAreaText{
-    text-align: justify;
-    padding: 0 2rem;
-    align-self: center;
-}
-.subAreaText{
-    font-size: 1.6rem;
-    font-weight: 500;
-}
-.subAreaText p{
-    font-size:1rem;
-}
-.subEnter button{
-    background: red;
-    width: 8rem;
-    border-radius: 2rem;
-    margin-left: -1rem;
-}
-.subEnter input{
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-}
-c-custom-carousel{
-    width:100%;
-    transition: width 0.6s ease;
-
-}
-footer{
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.20000000298023224);
-    width: 92vw;
-    background-color: white;
-    margin-top: 1.6rem;
-    padding: 2rem;
-}
 @keyframes infiniteScroll1 {
   from {transform: translateX(0)}
   to {transform: translateX(100%)}
@@ -458,4 +355,62 @@ footer{
     object-fit: cover;
 
 }
+input {
+  width: 20vw;
+}
+.subAreaText{
+    text-align: justify;
+    padding: 0 2rem;
+    align-self: center;
+}
+.subAreaText{
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.subAreaText p{
+    font-size:1rem;
+}
+.subEnter button{
+    background: red;
+    width: 8rem;
+    border-radius: 2rem;
+    margin-left: -1rem;
+}
+.subEnter input{
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+/*------Footer---------------------------------------------------------------------*/
+
+footer{
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.20000000298023224);
+    width: 92vw;
+    background-color: white;
+    margin-top: 1.6rem;
+    padding: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

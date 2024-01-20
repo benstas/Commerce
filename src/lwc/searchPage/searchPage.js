@@ -1,5 +1,5 @@
 import { LightningElement, track } from 'lwc';
-import findProduct from "@salesforce/apex/FindProductHandler.FindProduct";
+import findProduct from "@salesforce/apex/SiteProductHandler.findProducts";
 import siteImage from "@salesforce/resourceUrl/siteImage";
 
 export default class SearchPage extends LightningElement {

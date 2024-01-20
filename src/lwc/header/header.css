@@ -1,7 +1,7 @@
 .popMenu {
   transition: height 0.6s linear;
   position: absolute;
-  top: 19vh;
+  top: 25vh;
   right: 0;
   width: 25vw;
   height: 0;
@@ -17,6 +17,7 @@
 .popMenu li{
     margin: 1rem;
     font-weight: 200;
+    cursor:pointer;
 }
 .searchBar {
     display: flex;
@@ -39,10 +40,6 @@
   width: 1.5rem;
   height: 1.5rem;
 }
-.cc {
-  width: 5rem;
-  height: 5rem;
-}
 .searchbox {
   display: flex;
   height: 2rem;
@@ -51,10 +48,12 @@
   width: 7rem;
   background: red;
   color: white;
+  cursor: pointer;
 }
 
 input {
   width: 20vw;
+  cursor: pointer;
 }
 .catagory {
     display: flex;
@@ -63,6 +62,7 @@ input {
     background-color: #352544;
     color: white;
     font-size: 1.3rem;
+    cursor: pointer;
 }
 .catagory ul {
   display: flex;
@@ -76,11 +76,23 @@ input {
   gap: 15px;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .menu{
     width: 75%;
     align-self: center;
     padding-left: 1rem;
+}
+.menu li{
+    height: 10vh;
+    width: 7vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.menu li:hover{
+    background-color:#473665;
 }
 .basket{
     display:flex;
@@ -98,4 +110,7 @@ input {
     height: 1.3rem;
     width: 1.3rem;
     text-align-last: center;
+}
+.navItem{
+    cursor: pointer;
 }

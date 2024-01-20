@@ -33,10 +33,7 @@ background: #f0f0e3;
     width:1.5rem;
         height:1.5rem;
 }
-.cc{
-    width:5rem;
-    height:5rem;
-}
+
 .searchbox{
     display:flex;
 }
@@ -71,12 +68,12 @@ input{
         gap: 15px;
         justify-content: center;
 }
-.title img{
+.titleSection img{
     width:100vw;
     height:50vh;
     object-fit:cover;
 }
-.itemArea{
+.itemAreaSection{
     display:flex;
         margin: 4rem;
 }

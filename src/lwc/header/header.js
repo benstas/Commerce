@@ -25,10 +25,34 @@ export default class Header extends NavigationMixin(LightningElement) {
         this[NavigationMixin.Navigate]({
             "type": "standard__webPage",
             "attributes":{
-                "url": "/search"
+                "url": '/search?' + this.searchTerm,
             }
         })
         }
+        navigateProducts(){
+            this[NavigationMixin.Navigate]({
+                        "type": "standard__webPage",
+                        "attributes":{
+                            "url": '/products',
+                        }
+        })
+        }
+        navigateHome(){
+                    this[NavigationMixin.Navigate]({
+                                "type": "standard__webPage",
+                                "attributes":{
+                                    "url": '/'
+                                }
+                })
+                        }
+        navigateLogin(){
+                            this[NavigationMixin.Navigate]({
+                                        "type": "standard__webPage",
+                                        "attributes":{
+                                            "url": '/login'
+                                        }
+                        })
+                                }
     get numberofItemOnCart() {
         return this.cartList.length;
       }

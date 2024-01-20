@@ -1,77 +1,11 @@
-.headerInfo{
-    display: flex;
-    justify-content: space-between;
-background: #f0f0e3;
-    height: 5vh;
-    padding: 0.4rem 1rem;
-}
 
-.contactInfo{
-    display: flex;
-    margin: 0 1rem;
-    align-items: center;
-}
-.searchBar{
-    display:flex;
-    height:8vh;
-    justify-content: space-between;
-    margin: 2rem;
-}
-.basketIcons{
-    display:flex;
-}
-.logo{
-        width: 4rem;
-        height: auto;
-}
-.hcc{
-    width:1.5rem;
-        height:1.5rem;
-}
-.cc{
-    width:5rem;
-    height:5rem;
-}
-.searchbox{
-    display:flex;
-}
-.search{
-    width: 7rem;
-    background: red;
-    color: white;
-}
-.search p{
-        padding: 11px;
-        text-align: center;
-}
-input{
-        width: 20vw;
-}
-.catagory{
-    display: flex;
-    justify-content: space-between;
-    padding:1%;
-    height:9vh
-}
-.catagory ul{
-    display:flex;
-    gap: 1rem;
-}
-.catagoryButton{
-    background: red;
-        color: white;
-        width: 15vw;
-        border-radius: 10px;
-        display: flex;
-        gap: 15px;
-        justify-content: center;
-}
-.title img{
+.titleSection img{
     width:100vw;
     height:50vh;
     object-fit:cover;
 }
-.itemTable{
+/*------------------------------------------------------------------------------------------------------------------------*/
+.itemTableSection{
     padding: 2rem;
     margin-top: 4rem;
 }
