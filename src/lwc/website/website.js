@@ -2,7 +2,7 @@ import { LightningElement, wire, track } from 'lwc';
 import siteImage from '@salesforce/resourceUrl/siteImage'
 import getPopularProduct from "@salesforce/apex/SiteProductHandler.getPopularProducts";
 import {NavigationMixin} from 'lightning/navigation'
-
+import getVisitorIP from'@salesforce/apex/VisitorIPController.getVisitorIP'
 
 export default class Website extends NavigationMixin(LightningElement) {
     i1 = `${siteImage}/siteImage/i1.jpg`
@@ -89,6 +89,7 @@ export default class Website extends NavigationMixin(LightningElement) {
          this.popularProductData();
      }
 //--------Data----------------------------------------------------------------------------------------------------------------------------------------
+
 
      popularProductData() {
          getPopularProduct()
